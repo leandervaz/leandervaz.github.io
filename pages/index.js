@@ -1,10 +1,12 @@
 import CoverPage from "../components/CoverPage";
 import styled from 'styled-components';
+import AboutPage from "../components/AboutPage";
 
 const Home = () => {
   return (
     <Section>
       <CoverPage />
+      <AboutPage />
     </Section>
   );
 }

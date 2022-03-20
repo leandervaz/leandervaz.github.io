@@ -105,7 +105,7 @@ const SocialMedia = styled.div`
     display: flex;
     /* justify-content: space-around; */
     align-items: center;
-        /* border: 2px solid red; */
+    /* border: 2px solid red; */
 
 `
 
