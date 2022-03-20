@@ -1,12 +1,14 @@
 import CoverPage from "../components/CoverPage";
 import styled from 'styled-components';
 import AboutPage from "../components/AboutPage";
+import ProjectPage from "../components/ProjectPage";
 
 const Home = () => {
   return (
     <Section>
       <CoverPage />
       <AboutPage />
+      <ProjectPage />
     </Section>
   );
 }
