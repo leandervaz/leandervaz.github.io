@@ -1,42 +1,48 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import coverImage from '../../public/assets/images/portfolio/mapme/cover.png';
 import gitHubIcon from '../../public/assets/images/github.png';
 import webIcon from '../../public/assets/images/web.png';
 import TechStackList from '../../components/TechStackList';
+import ProjectsData from '../../data';
 
-const ProjectDetails = () => {
+const ProjectDetails = ({ project }) => {
     return (
         <Section>
-            <Title>MapMe</Title>
+            <Title>{project.name}</Title>
 
             <Cover>
-                <Image src={coverImage} alt={"MapMe"}/>
+                <Image width={project.width} height={project.height} src={project.image} alt={project.slug}/>
             </Cover>
 
             <LinkRow>
-                <GitHubLink href="" target={'_blank'} >
-                    <Image src={gitHubIcon} alt={"GitHub"}/>
+                <GitHubLink href={project.githubLink} target={'_blank'}>
+                    <Image quality={50} width={50} height={50} src={gitHubIcon} alt={"GitHub"}/>
                     <p>GitHub</p>
                 </GitHubLink>
-                <WebLink href="" target={'_blank'} >
-                    <Image src={webIcon} alt={"Web"} width={80} height={80} />
-                    <p>Web</p>
-                </WebLink>
+                {
+                    project.websiteLink &&
+                    <WebLink href={project.websiteLink} target={'_blank'}>
+                        <Image quality={50} width={35} height={35} src={webIcon} alt={"Web"} />
+                        <p>Web</p>
+                    </WebLink>
+                }
             </LinkRow>
 
             <Description>
-                <DescriptionTitle>Description</DescriptionTitle>
+                <SubTitle>Description</SubTitle>
                 <DescriptionText>
-                    A location tracking application for mobile devices built by The Boys as Minor Project. MapMe tracks your location and give you details on the route, average speed,time and distance covered. To track just tap on 'Start Tracking' and the app will now start collecting your coordinates and starts to draw PolyLines which are used to depict a route from one place to another. You can also view your tracked history and all these details are not collected by us, it is safely stored on your personal device.
+                    {project.description}
                 </DescriptionText>
             </Description>
 
             <TechStack>
-                <TechStackTitle>Tech Stack</TechStackTitle>
+                <SubTitle>Tech Stack</SubTitle>
                 <TechStackLists>
-                    <TechStackList text={'Next.js'} />
-                    <TechStackList text={'React.js'} />
+                    {
+                        project.techStack.map((techStack, index) => (
+                            <TechStackList key={index} text={techStack} />
+                        ))
+                    }
                 </TechStackLists>
             </TechStack>
         </Section>
@@ -73,14 +79,16 @@ const LinkRow = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin: 5vh 0;
 `
 
 const GitHubLink = styled.a`
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 5vw;
+
 `
 
 const WebLink = styled.a`
@@ -88,36 +96,75 @@ const WebLink = styled.a`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 5vw;
+
+    p{
+        margin-left: 10px;
+    }
 `
 
 const Description = styled.div`
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
 `
 
-const DescriptionTitle = styled.h2`
-    font-size: 5vh;
+const SubTitle = styled.h2`
+    font-size: 4vh;
     font-weight: 500;
     /* line-height: 23vh; */
-    margin: 0;
+    margin: 5px 0;
 `
 
-const DescriptionText = styled.p``
+const DescriptionText = styled.p`
+    margin: 0 auto;
+    font-size: 2.2vh;
+    line-height: 3.8vh;
+    /* align-self: flex-start; */
 
+`
 const TechStack = styled.div`
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 30px 0;
 `
 
-const TechStackTitle = styled.h2``
-
-const TechStackLists = styled.div``
-
-
+const TechStackLists = styled.div`
+    margin: 10px 0;
+`
 
 
 
+export const getStaticPaths = async () => {
+    const paths = ProjectsData.map(project => {
+        return {
+            params: {
+                name: project.slug
+            }
+        }
+    })
+    return { paths, fallback: false };
+}
+
+
+export const getStaticProps = async (context) => {
+
+    const { params } = context;
+    const project = ProjectsData.find(project => project.slug === params.name);
+   
+
+    if(!project) {
+        return{
+            notFound: true
+        }
+    }
+
+    return {
+        props:{
+            project
+        }
+    }
+}

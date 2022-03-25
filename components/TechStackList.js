@@ -5,7 +5,7 @@ import arrowIcon from '../public/assets/images/arrow.png';
 const TechStackList = (props) => {
     return (
         <Wrapper>
-            <Image src={arrowIcon} alt={"arrow"} width={20} height={20} />
+            <Image quality={50} src={arrowIcon} alt={"arrow"} width={13} height={13} />
             <ListText>{props.text}</ListText>
         </Wrapper>
     );
@@ -21,4 +21,5 @@ const Wrapper = styled.div`
 
 const ListText = styled.p`
     margin: 8px 5px;
+    font-size: 2.2vh;
 `
