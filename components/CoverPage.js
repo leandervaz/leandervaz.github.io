@@ -19,25 +19,33 @@ const CoverPage = () => {
                         <HeaderLine>Swaaz</HeaderLine>
                     </CoverPageLeft>
                     <CoverPageRight>
-                        <Image src={swaazVector} alt={"swaaz"}/>
+                        <Image
+                            src={swaazVector}
+                            alt={"swaaz"}
+                            width={779}
+                            height={779}
+                            priority={true}
+                            layout={'responsive'}
+                            placeholder={'blur'}
+                        />
                     </CoverPageRight>
                 </Cover>
 
                 <SocialMedia>
                     <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
-                        <Image src={githubLogo} alt={"github"}/>
+                        <Image quality={50} src={githubLogo} alt={"github"}/>
                     </SocialMediaItem>
                     <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
-                        <Image src={linkedinLogo} alt={"LinkedIn"}/>
+                        <Image quality={50} src={linkedinLogo} alt={"LinkedIn"}/>
                     </SocialMediaItem>
                     <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
-                        <Image src={twitterLogo} alt={"Twitter"}  />
+                        <Image quality={50} src={twitterLogo} alt={"Twitter"}  />
                     </SocialMediaItem>
                     <SocialMediaItemInsta href="https://www.github.com/swaaz" target={"_blank"} >
-                        <Image src={instagramLogo} alt={"Instagram"}/>
+                        <Image quality={50} src={instagramLogo} alt={"Instagram"}/>
                     </SocialMediaItemInsta>
                     <SocialLine>
-                        <Image src={lineVector} alt={"line"}/>
+                        <Image quality={50} src={lineVector} alt={"line"}/>
                     </SocialLine>
                 </SocialMedia>
             </SectionCenter>
@@ -89,9 +97,6 @@ const CoverPageRight = styled.div`
     width: 40%;
     /* border: 2px solid red; */
 
-    img {
-        width: 100%;
-    }
 
 `
 const HeaderLine = styled.h1`
