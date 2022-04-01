@@ -33,6 +33,7 @@ const SectionCenter = styled.div`
     flex-direction: column ;
     align-items: center;
     justify-content: space-evenly;
+    
     display: table-cell;
     vertical-align: middle;
     text-align:center
