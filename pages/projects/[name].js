@@ -11,7 +11,7 @@ const ProjectDetails = ({ project }) => {
             <Title>{project.name}</Title>
 
             <Cover>
-                <Image width={project.width} height={project.height} src={project.image} alt={project.slug}/>
+                <Image blurDataURL width={project.width} height={project.height} src={project.image} alt={project.slug}/>
             </Cover>
 
             <LinkRow>

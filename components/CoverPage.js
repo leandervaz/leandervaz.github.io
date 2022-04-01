@@ -26,7 +26,6 @@ const CoverPage = () => {
                             height={779}
                             priority={true}
                             layout={'responsive'}
-                            placeholder={'blur'}
                         />
                     </CoverPageRight>
                 </Cover>
