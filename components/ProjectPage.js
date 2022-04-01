@@ -19,11 +19,11 @@ const ProjectPage = () => {
                 <Project>
                     <ProjectTitle>MapMe</ProjectTitle>
                     <ProjectCover>
-                        <Image src={MapMeCover} alt={"MapMe"}/>
+                        <Image placeholder='blur' src={MapMeCover} alt={"MapMe"}/>
                     </ProjectCover>
                     <ProjectDescription>
                         <ProjectSnapShotLeft>
-                            <Image src={MapMeSnapShot} alt={"MapMe"}/>
+                            <Image placeholder='blur'  src={MapMeSnapShot} alt={"MapMe"}/>
                         </ProjectSnapShotLeft>
                         <ProjectContentRight>
                             <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >MapMe</ProjectLink> is an OpenSource Cross Platform App to track wherever you go!
@@ -34,14 +34,14 @@ const ProjectPage = () => {
                 <Project>
                     <ProjectTitle>Halo</ProjectTitle>
                     <ProjectCover>
-                        <Image src={HaloCover} alt={"Halo"}/>
+                        <Image placeholder='blur'  src={HaloCover} alt={"Halo"}/>
                     </ProjectCover>
                     <ProjectDescription>
                         <ProjectContentLeft>
                             <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Halo</ProjectLink> is an open-source game we community folks built in a Hackathon.
                         </ProjectContentLeft>
                         <ProjectSnapShotRight>
-                            <Image src={HaloSnapShot} alt={"Halo"}/>
+                            <Image  placeholder='blur'  src={HaloSnapShot} alt={"Halo"}/>
                         </ProjectSnapShotRight>
 
                     </ProjectDescription>
@@ -50,14 +50,14 @@ const ProjectPage = () => {
                 <Project>
                     <ProjectTitle>GitGo</ProjectTitle>
                     <ProjectCover>
-                        <Image src={GitGoCover} alt={"GitGo"}/>
+                        <Image  placeholder='blur'  src={GitGoCover} alt={"GitGo"}/>
                     </ProjectCover>
                     <ProjectDescription>
                         <ProjectContentLeft>
                             What's it like to create your first pull request on GitHub? <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >GitGo</ProjectLink> has a fun exercise to instruct you how to do so.
                         </ProjectContentLeft>
                         <ProjectSnapShotRight>
-                            <Image src={GitGoSnapShot} alt={"GitGo"}/>
+                            <Image placeholder='blur'  src={GitGoSnapShot} alt={"GitGo"}/>
                         </ProjectSnapShotRight>
                     </ProjectDescription>
                 </Project>

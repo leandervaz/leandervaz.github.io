@@ -2,6 +2,8 @@ import CoverPage from "../components/CoverPage";
 import styled from 'styled-components';
 import AboutPage from "../components/AboutPage";
 import ProjectPage from "../components/ProjectPage";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       <CoverPage />
       <AboutPage />
       <ProjectPage />
+      <Contact />
+      <Footer />
     </Section>
   );
 }
