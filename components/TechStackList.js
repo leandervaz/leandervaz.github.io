@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import arrowIcon from '../public/assets/images/arrow.png';
+import { device } from '../styles/responsive';
 
 const TechStackList = (props) => {
     return (
@@ -22,4 +23,8 @@ const Wrapper = styled.div`
 const ListText = styled.p`
     margin: 8px 5px;
     font-size: 2.2vh;
+
+    @media ${device.mobileM}{
+        font-size: 1.8vh;
+    }
 `

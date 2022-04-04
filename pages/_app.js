@@ -5,7 +5,7 @@ const theme = {
   colors: {
     background: '#ffffff',
     primary: 'pink'
-  }
+  },
 }
 function MyApp({ Component, pageProps }) {
   return (
