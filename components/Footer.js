@@ -15,4 +15,5 @@ const FooterBody = styled.div`
     min-height: 8vh;
     margin: 0;
     background: #000000;
+    scroll-behavior: none;
 `

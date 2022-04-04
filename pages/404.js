@@ -55,7 +55,7 @@ const NotFoundImage = styled.div`
 
 const NotFoundText = styled.p`
     font-size: 2.2vh;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
 
     @media ${device.laptopM} {

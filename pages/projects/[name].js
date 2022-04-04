@@ -4,25 +4,32 @@ import gitHubIcon from '../../public/assets/images/github.png';
 import webIcon from '../../public/assets/images/web.png';
 import TechStackList from '../../components/TechStackList';
 import ProjectsData from '../../data';
+import { device } from '../../styles/responsive';
+import Footer from '../../components/Footer';
 
 const ProjectDetails = ({ project }) => {
     return (
+        <>
         <Section>
             <Title>{project.name}</Title>
 
             <Cover>
-                <Image blurDataURL width={project.width} height={project.height} src={project.image} alt={project.slug}/>
+                <Image layout={'responsive'}  blurDataURL width={project.width} height={project.height} src={project.image} alt={project.slug}/>
             </Cover>
 
             <LinkRow>
                 <GitHubLink href={project.githubLink} target={'_blank'}>
-                    <Image quality={50} width={50} height={50} src={gitHubIcon} alt={"GitHub"}/>
+                    <IconDiv>
+                        <Image  quality={50} width={40} height={40} src={gitHubIcon} alt={"GitHub"}/>
+                    </IconDiv>
                     <p>GitHub</p>
                 </GitHubLink>
                 {
                     project.websiteLink &&
                     <WebLink href={project.websiteLink} target={'_blank'}>
-                        <Image quality={50} width={35} height={35} src={webIcon} alt={"Web"} />
+                        <IconDiv>
+                            <Image quality={50} width={30} height={30} src={webIcon} alt={"Web"} />
+                        </IconDiv>
                         <p>Web</p>
                     </WebLink>
                 }
@@ -46,6 +53,8 @@ const ProjectDetails = ({ project }) => {
                 </TechStackLists>
             </TechStack>
         </Section>
+        <Footer />
+        </>
     );
 }
 
@@ -59,6 +68,10 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media ${device.mobileM}{
+        width: 90%;
+    }
 `
 
 const Title = styled.h1`
@@ -66,6 +79,14 @@ const Title = styled.h1`
     font-weight: 500;
     line-height: 23vh;
     margin: 0;
+    margin-bottom: 5vh;
+
+    @media ${device.tabletM}{
+        font-size: 12vh;
+    }
+    @media ${device.mobileM}{
+        font-size: 8vh;
+    }
 `
 
 const Cover = styled.div`
@@ -80,6 +101,7 @@ const LinkRow = styled.div`
     justify-content: space-evenly;
     align-items: center;
     margin: 5vh 0;
+    /* width: 100%; */
 `
 
 const GitHubLink = styled.a`
@@ -88,7 +110,13 @@ const GitHubLink = styled.a`
     justify-content: center;
     align-items: center;
     margin: 0 5vw;
+    /* width: 40%; */
 
+    p{
+        @media ${device.mobileM}{
+            font-size: 2vh;
+        }
+    }
 `
 
 const WebLink = styled.a`
@@ -97,10 +125,19 @@ const WebLink = styled.a`
     justify-content: center;
     align-items: center;
     margin: 0 5vw;
+    /* width: 40%; */
 
     p{
         margin-left: 10px;
+
+        @media ${device.mobileM}{
+            font-size: 2vh;
+        }
     }
+`
+
+const IconDiv = styled.div`
+    width: 80%;
 `
 
 const Description = styled.div`
@@ -108,20 +145,33 @@ const Description = styled.div`
     display: flex;
     flex-direction: column;
 
+
 `
 
 const SubTitle = styled.h2`
-    font-size: 4vh;
+    font-size: 7vh;
     font-weight: 500;
     /* line-height: 23vh; */
     margin: 5px 0;
+
+    
+    @media ${device.tabletM}{
+        font-size: 4vh;
+    }
+    @media ${device.mobileM}{
+        font-size: 3.5vh;
+    }
 `
 
 const DescriptionText = styled.p`
     margin: 0 auto;
     font-size: 2.2vh;
     line-height: 3.8vh;
-    /* align-self: flex-start; */
+
+
+    @media ${device.mobileM}{
+        font-size: 1.8vh;
+    }
 
 `
 const TechStack = styled.div`
@@ -154,7 +204,7 @@ export const getStaticProps = async (context) => {
 
     const { params } = context;
     const project = ProjectsData.find(project => project.slug === params.name);
-   
+
 
     if(!project) {
         return{

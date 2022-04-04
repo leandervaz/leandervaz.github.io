@@ -3,7 +3,7 @@ const Projects = [
         slug : "mapme",
         name: 'MapMe',
         description: "A location tracking application for mobile devices built by The Boys as Minor Project. MapMe tracks your location and give you details on the route, average speed,time and distance covered. To track just tap on 'Start Tracking' and the app will now start collecting your coordinates and starts to draw PolyLines which are used to depict a route from one place to another. You can also view your tracked history and all these details are not collected by us, it is safely stored on your personal device.",
-        techStack: ['Next.js'],
+        techStack: ['React.js', 'React Native', 'SASS', 'Context API', 'Google Maps API', 'Async Storage' ],
         githubLink: 'https://www.github.com/swaaz/mapme',
         websiteLink: 'https://mapme.swaaz.dev',
         image: '/assets/images/portfolio/mapme/cover.png',
