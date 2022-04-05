@@ -7,6 +7,7 @@ import HaloSnapShot from '../public/assets/images/portfolio/halo/snapshot.png';
 import GitGoCover from '../public/assets/images/portfolio/gitgo/cover.png';
 import GitGoSnapShot from '../public/assets/images/portfolio/gitgo/snapshot.png';
 import Link from 'next/link';
+import { device } from '../styles/responsive';
 
 
 const ProjectPage = () => {
@@ -85,10 +86,33 @@ const Title = styled.h1`
     font-weight: 500;
     line-height: 23vh;
     margin: 0;
+
+    @media ${device.tabletM} {
+        font-size: 13vh;
+    }
+    @media ${device.mobileL} {
+        font-size: 11vh;
+    }
+    @media ${device.mobileM} {
+        font-size: 8vh;
+    }
 `
 const SubTitle = styled.p`
     font-size: 2.5vh;
     margin-top: 0;
+
+    @media ${device.tabletM}{
+        font-size: 2vh;
+        margin-top: -2vh;
+    }
+    @media ${device.mobileL} {
+        font-size: 1.8vh;
+        margin-top: -3vh;
+    }
+    @media ${device.mobileM} {
+        font-size: 1.5vh;
+        margin-top: -5vh;
+    }
 `
 
 const Projects = styled.div`
@@ -105,6 +129,10 @@ const Project = styled.div`
     align-items: center;
     width: 80%;
     margin: 50px auto;
+
+    @media ${device.tabletM} {
+        width: 90%;
+    }
 `
 
 const ProjectTitle = styled.h2`
@@ -127,6 +155,11 @@ const ProjectSnapShotRight = styled.div`
     margin-top: -15%;
     margin-right: -10%;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));
+
+    @media ${device.tabletM} {
+        margin-right: -5%;
+        margin-top: -50%;
+    }
 `
 
 const ProjectContentLeft = styled.div`
@@ -134,10 +167,19 @@ const ProjectContentLeft = styled.div`
     width: 40%;
     font-size: 2.8vh;
 
+    @media ${device.tabletM} {
+        font-size: 1.8vh;
+    }
+
 `
 
 const ProjectSnapShotLeft = styled(ProjectSnapShotRight)`
     width: 30%;
+
+    @media ${device.tabletM} {
+        margin-right: -10%;
+        margin-top: -15%;
+    }
 `
 
 const ProjectContentRight = styled(ProjectContentLeft)`
@@ -153,5 +195,9 @@ const ProjectsLink = styled.a`
     font-size: 2.5vh;
     text-decoration: underline;
     margin: 20px 0;
+
+    @media ${device.tabletM} {
+        font-size: 2vh;
+    }
 
 `

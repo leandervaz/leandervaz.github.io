@@ -158,6 +158,14 @@ const HeaderLine = styled.h1`
         font-size: 13vh;
         line-height: 13vh;
     }
+    @media ${device.mobileM} {
+        font-size: 12vh;
+        line-height: 12vh;
+    }
+    @media ${device.mobileS} {
+        font-size: 11vh;
+        line-height: 11vh;
+    }
 
 `
 
