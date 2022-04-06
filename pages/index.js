@@ -4,6 +4,7 @@ import AboutPage from "../components/AboutPage";
 import ProjectPage from "../components/ProjectPage";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ClubsCommunities from "../components/ClubsCommunities";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ProjectPage />
       <Contact />
       <Footer />
+      <ClubsCommunities />
     </Section>
   );
 }
