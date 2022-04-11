@@ -169,6 +169,19 @@ const Project = styled.div`
     width: 80%;
     margin: 50px auto;
 
+    img{
+        filter: grayscale(90%);
+        -webkit-filter: grayscale(90%);
+        -webkit-transition: all .5s ease-in-out; 
+
+
+        &:hover{
+            /* cursor: pointer; */
+            filter: none;
+            -webkit-filter: grayscale(0);
+        }
+    }
+
     @media ${device.tabletM} {
         width: 90%;
     }

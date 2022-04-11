@@ -11,10 +11,10 @@ const Home = () => {
     <Section>
       <CoverPage />
       <AboutPage />
+      <ClubsCommunities />
       <ProjectPage />
       <Contact />
       <Footer />
-      {/* <ClubsCommunities /> */}
     </Section>
   );
 }

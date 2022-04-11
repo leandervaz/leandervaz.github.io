@@ -1,142 +1,178 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { keyframes } from 'styled-components';
-import SampleIMG from '../public/assets/images/heart.png';
+import Carousel from "nuka-carousel";
+import { device } from '../styles/responsive';
 
-
-
-// import { arrowsPlugin } from "@brainhubeu/react-carousel";
+import GDSC from '../public/assets/images/logos/googledsc.png';
+import GCE from '../public/assets/images/logos/github.svg'
+import MLSA from '../public/assets/images//logos/microsoft.png';
+import HackClub from '../public/assets/images/logos/hackclub.svg';
+import Mozilla from '../public/assets/images/logos/mozilla.svg';
+import SOSC from '../public/assets/images/logos/sosc.svg';
+import CodeZoned from '../public/assets/images/logos/codezoned.png';
+import CodeChef from '../public/assets/images/logos/codechef.png';
 
 const ClubsCommunities = () => {
     return (
-        <Section1>
-            <Section2>
-                <Div1>
-                    <InnerDiv1>
+        <Section>
+            <Wrapper>
+                <Title>Clubs</Title>
+                <SubTitle>Open Source clubs and communities</SubTitle>
+                <Slider>
+                    <Carousel
+                    // animation='zoom'
+                    autoplay='true'
+                    autoplayInterval={1500}
+                    cellAlign='center'
+                    // cellSpacing={3}
+                    dragging='true'
+                    pauseOnHover='true'
+                    wrapAround={true}
+                    slidesToShow={4}
+                    disableEdgeSwiping={true}
+                    // scrollMode='remainder'
+                    speed={1500}
+
+                    >
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={GCE} alt={"GitHub Campus Expert"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={350} height={300} src={GDSC} alt={"Google Developer Student Club"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={MLSA} alt={"Microsoft learn student ambassador"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={HackClub} alt={"Hack Club"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={Mozilla} alt={"Mozilla Club"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={250} height={300} src={SOSC} alt={"Sahyadri Open Source Community"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={CodeChef} alt={"CodeChef"}/>
                         </ImageDiv>
                         <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
+                            <Image width={300} height={300} src={CodeZoned} alt={"CodeZoned"}/>
                         </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                    </InnerDiv1>
-                </Div1>
-                <Div2>
-                <InnerDiv2>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={100} height={100} src={SampleIMG} alt={"Heart"}/>
-                        </ImageDiv>
-                    </InnerDiv2>
-                </Div2>
-            </Section2>
-        </Section1>
+
+                    </Carousel>
+                </Slider>
+            </Wrapper>
+
+        </Section>
     );
 }
 
 export default ClubsCommunities;
 
-const animationCustom = keyframes`
-0%    { left: 0; }
-  100%  { left: -200%; }
-`
 
-const Section1 = styled.div`
+
+const Section = styled.div`
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
+    min-height: 50vh;
+    display: table;
 
-    
-    position: relative;
-    overflow: hidden;
+    .slider-control-centerleft{
+        display: none;
+    }
+    .slider-control-centerright{
+        display: none;
+    }
+    .slider-control-bottomcenter{
+        display: none;
+    }
+
+    @media ${device.mobileM}{
+        min-height: 0;
+    }
+
+
 `
 
-const Section2 = styled.div`
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    /* -webkit-animation: slide 80s linear infinite;
-    animation: slide 80s linear infinite; */
-    animation: slideshow 10s linear infinite;
-    animation-name: ${animationCustom};
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    
+const Wrapper = styled.div`
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center
 `
 
-const Div1 = styled.div`
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 300%;
+const Slider = styled.div`
+    width: 80%;
+    margin: 15vh auto;
+
+    @media ${device.tabletS}{
+        width: 90%;
+        margin: 10vh auto;
+    }
+    @media ${device.mobileM}{
+        margin: 5vh auto;
+    }
+
 `
-
-const Div2 = styled.div``
-
-const InnerDiv1 = styled.div`
-    white-space: nowrap;
-    overflow: hidden;
-`
-
-const InnerDiv2 = styled.div``
 
 const ImageDiv = styled.div`
-    display: inline-block;
-    padding: 0 2.2rem;
-    vertical-align: middle;
-    outline: none;
-    cursor: default;
+    width: 40%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img{
+        filter: grayscale(90%);
+        -webkit-filter: grayscale(90%);
+        -webkit-transition: all .5s ease-in-out;
+
+
+        &:hover{
+            cursor: pointer;
+            filter: none;
+            -webkit-filter: grayscale(0);
+        }
+    }
+
+    @media ${device.tabletS}{
+        width: 50%;
+    }
+    @media ${device.mobileL}{
+        width: 70%;
+    }
 `
+const Title = styled.h1`
+    font-size: 20vh;
+    font-weight: 500;
+    line-height: 23vh;
+    margin: 0;
+
+    @media ${device.tabletM} {
+        font-size: 13vh;
+    }
+    @media ${device.mobileL} {
+        font-size: 11vh;
+    }
+    @media ${device.mobileM} {
+        font-size: 8vh;
+    }
+`
+const SubTitle = styled.p`
+    font-size: 2.5vh;
+    margin-top: 0;
+
+    @media ${device.tabletM}{
+        font-size: 2vh;
+        margin-top: -2vh;
+    }
+    @media ${device.mobileL} {
+        font-size: 1.8vh;
+        margin-top: -3vh;
+    }
+    @media ${device.mobileM} {
+        font-size: 1.5vh;
+        margin-top: -5vh;
+    }
+`
+
 
