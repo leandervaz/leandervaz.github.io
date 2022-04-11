@@ -14,7 +14,7 @@ const Home = () => {
       <ProjectPage />
       <Contact />
       <Footer />
-      <ClubsCommunities />
+      {/* <ClubsCommunities /> */}
     </Section>
   );
 }
