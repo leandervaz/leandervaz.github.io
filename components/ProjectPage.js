@@ -133,6 +133,19 @@ const Project = styled.div`
     @media ${device.tabletM} {
         width: 90%;
     }
+
+    img{
+        filter: grayscale(90%);
+        -webkit-filter: grayscale(90%);
+        -webkit-transition: all .5s ease-in-out;  
+
+
+        &:hover{
+            /* cursor: pointer; */
+            filter: none;
+            -webkit-filter: grayscale(0);
+        }
+    }
 `
 
 const ProjectTitle = styled.h2`
@@ -141,6 +154,7 @@ const ProjectTitle = styled.h2`
 
 const ProjectCover = styled.div`
     filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+
 `
 
 const ProjectDescription = styled.div`
@@ -155,6 +169,7 @@ const ProjectSnapShotRight = styled.div`
     margin-top: -15%;
     margin-right: -10%;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));
+
 
     @media ${device.tabletM} {
         margin-right: -5%;
