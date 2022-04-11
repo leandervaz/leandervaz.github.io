@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import { keyframes } from 'styled-components';
 import SampleIMG from '../public/assets/images/heart.png';
 
-const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), {
-    ssr: false
-});
+
 
 // import { arrowsPlugin } from "@brainhubeu/react-carousel";
 
