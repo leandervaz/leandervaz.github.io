@@ -5,10 +5,12 @@ import ProjectPage from "../components/ProjectPage";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ClubsCommunities from "../components/ClubsCommunities";
+import Banner from "../components/Banner";
 
 const Home = () => {
   return (
     <Section>
+      <Banner />
       <CoverPage />
       <AboutPage />
       <ClubsCommunities />

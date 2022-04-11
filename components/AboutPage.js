@@ -10,10 +10,10 @@ const AboutPage = () => {
                     <SubTitle>Want to know me?</SubTitle>
                     <Content>
                         <ContentParagraph>
-                            I am Swasthik Shetty; A seasoned developer and designer. Loves to learn and explore new technologies and share the knowledge back to the community. I love to contribute and talk about the open-source while spending most of my time designing or on GitHub. 
+                            I am <Highlighter>Swasthik Shetty</Highlighter>; A seasoned developer and designer. Loves to learn and explore new technologies and share the knowledge back to the community. I love to contribute and talk about the open-source while spending most of my time designing or on GitHub. 
                         </ContentParagraph>
                         <ContentParagraph>
-                            I am a Third-year Information Science Engineering student from Mangaluru, India. I am a GitHub Campus Expert; Microsoft Student Learn Ambassador, Lead of Hack Club Sahyadri, President of CodeChef SCEM, Developer at codezoned, Technical Head of Sahyadri Open-Source Community and Game Development Head of Mozilla Club Sahyadri. 
+                            I am a final year Information Science Engineering student from Mangaluru, India. I am a <Highlighter>GitHub Campus Expert</Highlighter>; <Highlighter>Microsoft Learn Student Ambassador</Highlighter>, Lead of <Highlighter>Hack Club</Highlighter>, President of <Highlighter>Sahyadri Open-Source Community</Highlighter> and Community member of <Highlighter>Google Developer Student Club</Highlighter>. 
                         </ContentParagraph>
                     </Content>
                 </SectionCenter>
@@ -98,4 +98,6 @@ const ContentParagraph = styled.p`
         line-height: 3vh;
     }
 `
-
+const Highlighter = styled.span`
+    font-weight: bold;
+`
