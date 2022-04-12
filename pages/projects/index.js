@@ -14,6 +14,7 @@ import PryceySnapShot from '../../public/assets/images/portfolio/prycey/snapshot
 import HackSOSCCover from '../../public/assets/images/portfolio/hacksosc/cover.png';
 import HackSOSCSnapShot from '../../public/assets/images/portfolio/hacksosc/snapshot.png';
 import Footer from '../../components/Footer';
+import Link from 'next/link';
 
 const Projects = () => {
     return (
@@ -23,38 +24,43 @@ const Projects = () => {
 
             <ProjectsSection>
 
-                <Project>
-                    <ProjectTitle>MapMe</ProjectTitle>
-                    <ProjectCover>
-                        <Image placeholder='blur' src={MapMeCover} alt={"MapMe"}/>
-                    </ProjectCover>
-                    <ProjectDescription>
-                        <ProjectSnapShotLeft>
-                            <Image placeholder='blur'  src={MapMeSnapShot} alt={"MapMe"}/>
-                        </ProjectSnapShotLeft>
-                        <ProjectContentRight>
-                            <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >MapMe</ProjectLink> is an OpenSource Cross Platform App to track wherever you go!
-                        </ProjectContentRight>
-                    </ProjectDescription>
-                </Project>
+                <Link href="/projects/mapme">
+                    <Project>
+                        <ProjectTitle>MapMe</ProjectTitle>
+                        <ProjectCover>
+                            <Image placeholder='blur' src={MapMeCover} alt={"MapMe"}/>
+                        </ProjectCover>
+                        <ProjectDescription>
+                            <ProjectSnapShotLeft>
+                                <Image placeholder='blur'  src={MapMeSnapShot} alt={"MapMe"}/>
+                            </ProjectSnapShotLeft>
+                            <ProjectContentRight>
+                                <ProjectBold>MapMe</ProjectBold> is an OpenSource Cross Platform App to track wherever you go!
+                            </ProjectContentRight>
+                        </ProjectDescription>
+                    </Project>
+                </Link>
 
 
-                <Project>
-                    <ProjectTitle>Halo</ProjectTitle>
-                    <ProjectCover>
-                        <Image placeholder='blur'  src={HaloCover} alt={"Halo"}/>
-                    </ProjectCover>
-                    <ProjectDescription>
-                        <ProjectContentLeft>
-                            <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Halo</ProjectLink> is an open-source game we community folks built in a Hackathon.
-                        </ProjectContentLeft>
-                        <ProjectSnapShotRight>
-                            <Image  placeholder='blur'  src={HaloSnapShot} alt={"Halo"}/>
-                        </ProjectSnapShotRight>
+                <Link href="/projects/halo">
+                    <Project>
+                        <ProjectTitle>Halo</ProjectTitle>
+                        <ProjectCover>
+                            <Image placeholder='blur'  src={HaloCover} alt={"Halo"}/>
+                        </ProjectCover>
+                        <ProjectDescription>
+                            <ProjectContentLeft>
+                                <ProjectBold  >Halo</ProjectBold> is an open-source game we community folks built in a Hackathon.
+                            </ProjectContentLeft>
+                            <ProjectSnapShotRight>
+                                <Image  placeholder='blur'  src={HaloSnapShot} alt={"Halo"}/>
+                            </ProjectSnapShotRight>
 
-                    </ProjectDescription>
-                </Project>
+                        </ProjectDescription>
+                    </Project>
+                </Link>
 
+                <Link href="/projects/healthque">
                 <Project>
                     <ProjectTitle>Healthque</ProjectTitle>
                     <ProjectCover>
@@ -65,12 +71,14 @@ const Projects = () => {
                             <Image placeholder='blur'  src={HealthqueSnapShot} alt={"Healthque"}/>
                         </ProjectSnapShotLeft>
                         <ProjectContentRight>
-                            <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Healthque</ProjectLink> is a mobile application to store and maintain digital health records.
+                            <ProjectBold >Healthque</ProjectBold> is a mobile application to store and maintain digital health records.
                         </ProjectContentRight>
                     </ProjectDescription>
                 </Project>
+                </Link>
 
 
+                <Link href="/projects/gitgo">
                 <Project>
                     <ProjectTitle>GitGo</ProjectTitle>
                     <ProjectCover>
@@ -78,14 +86,16 @@ const Projects = () => {
                     </ProjectCover>
                     <ProjectDescription>
                         <ProjectContentLeft>
-                            What's it like to create your first pull request on GitHub? <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >GitGo</ProjectLink> has a fun exercise to instruct you how to do so.
+                            What's it like to create your first pull request on GitHub? <ProjectBold>GitGo</ProjectBold> has a fun exercise to instruct you how to do so.
                         </ProjectContentLeft>
                         <ProjectSnapShotRight>
                             <Image placeholder='blur'  src={GitGoSnapShot} alt={"GitGo"}/>
                         </ProjectSnapShotRight>
                     </ProjectDescription>
                 </Project>
+                </Link>
 
+                <Link href="/projects/prycey">
                 <Project>
                     <ProjectTitle>Prycey</ProjectTitle>
                     <ProjectCover>
@@ -93,14 +103,16 @@ const Projects = () => {
                     </ProjectCover>
                     <ProjectDescription>
                         <ProjectContentLeft>
-                        Marketplace to buy and sell myriads of products? <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Prycey</ProjectLink> is an online marketplace which aims for simplicity and versatility.
+                        Marketplace to buy and sell myriads of products? <ProjectBold>Prycey</ProjectBold> is an online marketplace which aims for simplicity and versatility.
                         </ProjectContentLeft>
                         <ProjectSnapShotRight>
                             <Image placeholder='blur'  src={PryceySnapShot} alt={"Prycey"}/>
                         </ProjectSnapShotRight>
                     </ProjectDescription>
                 </Project>
+                </Link>
 
+                <Link href="/projects/hacksosc">
                 <Project>
                     <ProjectTitle>HackSOSC</ProjectTitle>
                     <ProjectCover>
@@ -111,11 +123,12 @@ const Projects = () => {
                             <Image placeholder='blur'  src={HackSOSCSnapShot} alt={"HackSOSC"}/>
                         </ProjectSnapShotLeft>
                         <ProjectContentRight>
-                        <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Chat Bot</ProjectLink> built during Hackathon using Deep learning and Natural language processing using Python.
+                        <ProjectBold>Chat Bot</ProjectBold> built during Hackathon using Deep learning and Natural language processing using Python.
                         </ProjectContentRight>
                     </ProjectDescription>
                 </Project>
 
+                </Link>
             </ProjectsSection>
         </Section>
         <Footer />
@@ -168,6 +181,7 @@ const Project = styled.div`
     align-items: center;
     width: 80%;
     margin: 50px auto;
+    cursor: pointer;
 
     img{
         filter: grayscale(90%);
@@ -238,7 +252,6 @@ const ProjectContentRight = styled(ProjectContentLeft)`
     width: 40%;
 `
 
-const ProjectLink = styled.a`
-    text-decoration: none;
+const ProjectBold = styled.span`
     font-weight: 700;
 `

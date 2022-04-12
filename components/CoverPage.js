@@ -35,13 +35,13 @@ const CoverPage = () => {
                     <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
                         <Image quality={50} width={50} height={50} src={githubLogo} alt={"github"}/>
                     </SocialMediaItem>
-                    <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
+                    <SocialMediaItem href="https://www.linkedin.com/in/swaaz/" target={"_blank"} >
                         <Image quality={50} width={50} height={50} src={linkedinLogo} alt={"LinkedIn"}/>
                     </SocialMediaItem>
-                    <SocialMediaItem href="https://www.github.com/swaaz" target={"_blank"} >
+                    <SocialMediaItem href="https://twitter.com/Swaaz07" target={"_blank"} >
                         <Image quality={50} width={50} height={50} src={twitterLogo} alt={"Twitter"}  />
                     </SocialMediaItem>
-                    <SocialMediaItemInsta href="https://www.github.com/swaaz" target={"_blank"} >
+                    <SocialMediaItemInsta href="https://www.instagram.com/_swaaz_/" target={"_blank"} >
                         <Image quality={50} width={30} height={30} src={instagramLogo} alt={"Instagram"}/>
                     </SocialMediaItemInsta>
                     <SocialLine>

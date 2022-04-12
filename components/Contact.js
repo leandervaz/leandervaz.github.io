@@ -9,7 +9,7 @@ const Contact = () => {
             <Wrapper>
                 <Title>Let's talk!</Title>
                 <SubTitle>Wanna talk about work? opportunity? collaboration? or life?</SubTitle>
-                <EmailButton href="" target="_blank">
+                <EmailButton  href = "mailto:swaasthik.shetty07@gmail.com?subject = Let's talk" target="_blank">
                     Say hello!
                 </EmailButton>
             </Wrapper>
