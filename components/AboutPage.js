@@ -10,8 +10,7 @@ const AboutPage = () => {
                     <SubTitle>Want to know me?</SubTitle>
                     <Content>
                         <ContentParagraph>
-                            I am <Highlighter>Swasthik Shetty</Highlighter>; A seasoned developer and designer. Loves to learn and explore new technologies and share the knowledge back to the community. I love to contribute and talk about the open-source while spending most of my time designing or on GitHub. 
-                        </ContentParagraph>
+                            I am <Highlighter>Swasthik Shetty</Highlighter>; A curious Full-Stack developer, who loves to learn and explore new technologies and share the knowledge back to the community. I love to contribute to and talk about the open source while spending most of my time freelancing.</ContentParagraph>
                         <ContentParagraph>
                             I am a final year Information Science Engineering student from Mangaluru, India. I am a <Highlighter>GitHub Campus Expert</Highlighter>; <Highlighter>Microsoft Learn Student Ambassador</Highlighter>, Lead of <Highlighter>Hack Club</Highlighter>, President of <Highlighter>Sahyadri Open-Source Community</Highlighter> and Community member of <Highlighter>Google Developer Student Club</Highlighter>. 
                         </ContentParagraph>

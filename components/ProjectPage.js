@@ -17,51 +17,58 @@ const ProjectPage = () => {
             <SubTitle>Checkout some cool stuffs I've built</SubTitle>
 
             <Projects>
-                <Project>
-                    <ProjectTitle>MapMe</ProjectTitle>
-                    <ProjectCover>
-                        <Image placeholder='blur' src={MapMeCover} alt={"MapMe"}/>
-                    </ProjectCover>
-                    <ProjectDescription>
-                        <ProjectSnapShotLeft>
-                            <Image placeholder='blur'  src={MapMeSnapShot} alt={"MapMe"}/>
-                        </ProjectSnapShotLeft>
-                        <ProjectContentRight>
-                            <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >MapMe</ProjectLink> is an OpenSource Cross Platform App to track wherever you go!
-                        </ProjectContentRight>
-                    </ProjectDescription>
-                </Project>
 
-                <Project>
-                    <ProjectTitle>Halo</ProjectTitle>
-                    <ProjectCover>
-                        <Image placeholder='blur'  src={HaloCover} alt={"Halo"}/>
-                    </ProjectCover>
-                    <ProjectDescription>
-                        <ProjectContentLeft>
-                            <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >Halo</ProjectLink> is an open-source game we community folks built in a Hackathon.
-                        </ProjectContentLeft>
-                        <ProjectSnapShotRight>
-                            <Image  placeholder='blur'  src={HaloSnapShot} alt={"Halo"}/>
-                        </ProjectSnapShotRight>
+                <Link href="/projects/mapme">
+                    <Project>
+                        <ProjectTitle>MapMe</ProjectTitle>
+                        <ProjectCover>
+                            <Image placeholder='blur' src={MapMeCover} alt={"MapMe"}/>
+                        </ProjectCover>
+                        <ProjectDescription>
+                            <ProjectSnapShotLeft>
+                                <Image placeholder='blur'  src={MapMeSnapShot} alt={"MapMe"}/>
+                            </ProjectSnapShotLeft>
+                            <ProjectContentRight>
+                                <ProjectBold >MapMe</ProjectBold> is an OpenSource Cross Platform App to track wherever you go!
+                            </ProjectContentRight>
+                        </ProjectDescription>
+                    </Project>
+                </Link>
 
-                    </ProjectDescription>
-                </Project>
+                <Link href="/projects/halo">
+                    <Project>
+                        <ProjectTitle>Halo</ProjectTitle>
+                        <ProjectCover>
+                            <Image placeholder='blur'  src={HaloCover} alt={"Halo"}/>
+                        </ProjectCover>
+                        <ProjectDescription>
+                            <ProjectContentLeft>
+                                <ProjectBold>Halo</ProjectBold> is an open-source game we community folks built in a Hackathon.
+                            </ProjectContentLeft>
+                            <ProjectSnapShotRight>
+                                <Image  placeholder='blur'  src={HaloSnapShot} alt={"Halo"}/>
+                            </ProjectSnapShotRight>
 
-                <Project>
-                    <ProjectTitle>GitGo</ProjectTitle>
-                    <ProjectCover>
-                        <Image  placeholder='blur'  src={GitGoCover} alt={"GitGo"}/>
-                    </ProjectCover>
-                    <ProjectDescription>
-                        <ProjectContentLeft>
-                            What's it like to create your first pull request on GitHub? <ProjectLink href="https://mapme.swaaz.dev" target={'_blank'} >GitGo</ProjectLink> has a fun exercise to instruct you how to do so.
-                        </ProjectContentLeft>
-                        <ProjectSnapShotRight>
-                            <Image placeholder='blur'  src={GitGoSnapShot} alt={"GitGo"}/>
-                        </ProjectSnapShotRight>
-                    </ProjectDescription>
-                </Project>
+                        </ProjectDescription>
+                    </Project>
+                </Link>
+
+                <Link href="/projects/gitgo">
+                    <Project>
+                        <ProjectTitle>GitGo</ProjectTitle>
+                        <ProjectCover>
+                            <Image  placeholder='blur'  src={GitGoCover} alt={"GitGo"}/>
+                        </ProjectCover>
+                        <ProjectDescription>
+                            <ProjectContentLeft>
+                                What's it like to create your first pull request on GitHub? <ProjectBold href="https://mapme.swaaz.dev" target={'_blank'} >GitGo</ProjectBold> has a fun exercise to instruct you how to do so.
+                            </ProjectContentLeft>
+                            <ProjectSnapShotRight>
+                                <Image placeholder='blur' src={GitGoSnapShot} alt={"GitGo"}/>
+                            </ProjectSnapShotRight>
+                        </ProjectDescription>
+                    </Project>
+                </Link>
 
                 <ProjectsLink>
                     <Link href="/projects">Excited to see more work?</Link>
@@ -129,6 +136,7 @@ const Project = styled.div`
     align-items: center;
     width: 80%;
     margin: 50px auto;
+    cursor: pointer;
 
     @media ${device.tabletM} {
         width: 90%;
@@ -201,8 +209,8 @@ const ProjectContentRight = styled(ProjectContentLeft)`
     width: 40%;
 `
 
-const ProjectLink = styled.a`
-    text-decoration: none;
+const ProjectBold = styled.span`
+    /* text-decoration: none; */
     font-weight: 700;
 `
 
