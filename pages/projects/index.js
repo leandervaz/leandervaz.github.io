@@ -15,10 +15,17 @@ import HackSOSCCover from '../../public/assets/images/portfolio/hacksosc/cover.p
 import HackSOSCSnapShot from '../../public/assets/images/portfolio/hacksosc/snapshot.png';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Projects = () => {
     return (
         <>
+        <Head>
+            <meta charset="utf-8" />
+            <meta name="Description" CONTENT="List of all the cool projects that I have built so far" />
+            <title>Projects</title>
+            <meta name="robots" content="all"/>
+        </Head>
         <Section>
             <Title>Projects</Title>
 

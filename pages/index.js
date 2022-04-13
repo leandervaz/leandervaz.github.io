@@ -6,9 +6,17 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ClubsCommunities from "../components/ClubsCommunities";
 import Banner from "../components/Banner";
+import Head from "next/head";
 
 const Home = () => {
   return (
+    <>
+    <Head>
+        <meta charset="utf-8" />
+        <meta name="Description" CONTENT="Swasthik Shetty; A curious Full-Stack developer, who loves to learn and explore new technologies and share the knowledge back to the community." />
+        <title>swaaz</title>
+        <meta name="robots" content="all"/>
+    </Head>
     <Section>
       <Banner />
       <CoverPage />
@@ -18,6 +26,7 @@ const Home = () => {
       <Contact />
       <Footer />
     </Section>
+    </>
   );
 }
 
