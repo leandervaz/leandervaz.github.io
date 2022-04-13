@@ -6,10 +6,17 @@ import TechStackList from '../../components/TechStackList';
 import ProjectsData from '../../data';
 import { device } from '../../styles/responsive';
 import Footer from '../../components/Footer';
+import Head from 'next/head';
 
 const ProjectDetails = ({ project }) => {
     return (
         <>
+        <Head>
+            <meta charset="utf-8" />
+            <meta name="Description" CONTENT={`${project.description}`} />
+            <title>{project.name}</title>
+            <meta name="robots" content="all"/>
+        </Head>
         <Section>
             <Title>{project.name}</Title>
 
