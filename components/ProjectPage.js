@@ -106,19 +106,19 @@ const Title = styled.h1`
 `
 const SubTitle = styled.p`
     font-size: 2.5vh;
-    margin-top: 0;
+    margin-top: 5px;
 
     @media ${device.tabletM}{
         font-size: 2vh;
-        margin-top: -2vh;
+        margin-top: -1vh;
     }
     @media ${device.mobileL} {
         font-size: 1.8vh;
-        margin-top: -3vh;
+        margin-top: -2vh;
     }
     @media ${device.mobileM} {
         font-size: 1.5vh;
-        margin-top: -5vh;
+        margin-top: -4vh;
     }
 `
 
