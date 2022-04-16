@@ -55,7 +55,7 @@ const Projects = [
     },
     {
         slug : "hacksosc",
-        name: 'Hack SOSC',
+        name: 'HackSOSC',
         description: 'Chat Bot built using Deep learning and Natural language processing using Python ',
         techStack: ['Flask', 'Javascript', 'Deep Learning', 'Tensorflow', 'Neural Network'],
         githubLink: 'https://github.com/swaaz/HackSOSC',

@@ -21,13 +21,13 @@ const ProjectDetails = ({ project }) => {
             <Title>{project.name}</Title>
 
             <Cover>
-                <Image layout={'responsive'}  blurDataURL width={project.width} height={project.height} src={project.image} alt={project.slug}/>
+                <Image layout={'responsive'} blurDataURL width={project.width} height={project.height} src={project.image} alt={project.slug}/>
             </Cover>
 
             <LinkRow>
                 <GitHubLink href={project.githubLink} target={'_blank'}>
                     <IconDiv>
-                        <Image  quality={50} width={40} height={40} src={gitHubIcon} alt={"GitHub"}/>
+                        <Image quality={30} width={40} height={40} src={gitHubIcon} alt={"GitHub"}/>
                     </IconDiv>
                     <p>GitHub</p>
                 </GitHubLink>
@@ -35,7 +35,7 @@ const ProjectDetails = ({ project }) => {
                     project.websiteLink &&
                     <WebLink href={project.websiteLink} target={'_blank'}>
                         <IconDiv>
-                            <Image quality={50} width={30} height={30} src={webIcon} alt={"Web"} />
+                            <Image quality={30} width={30} height={30} src={webIcon} alt={"Web"} />
                         </IconDiv>
                         <p>Web</p>
                     </WebLink>
@@ -82,17 +82,24 @@ const Section = styled.section`
 `
 
 const Title = styled.h1`
-    font-size: 18vh;
+    font-size: 15vh;
     font-weight: 500;
     line-height: 23vh;
     margin: 0;
     margin-bottom: 5vh;
 
-    @media ${device.tabletM}{
+    @media ${device.tabletL}{
         font-size: 12vh;
     }
+    @media ${device.tabletM}{
+        font-size: 10vh;
+        margin-bottom: 0;
+    }
+    @media ${device.tabletS}{
+        font-size: 7vh;
+    }
     @media ${device.mobileM}{
-        font-size: 8vh;
+        font-size: 6vh;
     }
 `
 
