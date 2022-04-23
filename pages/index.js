@@ -16,7 +16,9 @@ const Home = () => {
         <meta name="Description" CONTENT="Swasthik Shetty; A curious Full-Stack developer, who loves to learn and explore new technologies and share the knowledge back to the community." />
         <title>swaaz</title>
         <meta name="robots" content="all"/>
+         
     </Head>
+
     <Section>
       <Banner />
       <CoverPage />
