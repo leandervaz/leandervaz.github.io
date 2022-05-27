@@ -15,7 +15,7 @@ const Contact = () => {
             </Wrapper>
 
             <Footer>
-                <FooterLine>Made of earth with</FooterLine>
+                <FooterLine>Made on earth with</FooterLine>
                 <FooterHeart>
                     <Image width={25} height={25} quality={50} src={heart} alt="heart" />
                 </FooterHeart>
