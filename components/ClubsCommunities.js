@@ -43,7 +43,7 @@ const ClubsCommunities = () => {
                             </a>
                         </Link>
 
-                        <Link href='https://cloud.google.com' >
+                        <Link href='https://developers.google.com/community/gdsc/leads' >
                             <a target={"_blank"}>
                                 <ImageDiv>
                                     <Image width={350} height={300} src={GDSC} alt={"Google Developer Student Club"}/>
@@ -51,7 +51,8 @@ const ClubsCommunities = () => {
                             </a>
                         </Link>
 
-                        <Link href='https://developers.google.com/community/gdsc/leads' >
+
+                        <Link href='https://studentambassadors.microsoft.com/' >
                             <a target={"_blank"}>
                                 <ImageDiv>
                                     <Image width={300} height={300} src={MLSA} alt={"Microsoft learn student ambassador"}/>
@@ -75,7 +76,7 @@ const ClubsCommunities = () => {
                             </a>
                         </Link>
 
-                        <Link href='https://cloud.google.com' >
+                        <Link href='https://www.sosc.org.in/' >
                             <a target={"_blank"}>
                                 <ImageDiv>
                                     <Image width={250} height={300} src={SOSC} alt={"Sahyadri Open Source Community"}/>
@@ -83,7 +84,7 @@ const ClubsCommunities = () => {
                             </a>
                         </Link>
 
-                        <Link href='https://cloud.google.com' >
+                        <Link href='https://www.codechef.com/' >
                             <a target={"_blank"}>
                                 <ImageDiv>
                                     <Image width={300} height={300} src={CodeChef} alt={"CodeChef"}/>
@@ -92,7 +93,7 @@ const ClubsCommunities = () => {
                         </Link>
 
 
-                        <Link href='https://cloud.google.com' >
+                        <Link href='https://github.com/codezoned' >
                             <a target={"_blank"}>
                                 <ImageDiv>
                                     <Image width={300} height={300} src={CodeZoned} alt={"CodeZoned"}/>
