@@ -11,6 +11,7 @@ import Mozilla from '../public/assets/images/logos/mozilla.svg';
 import SOSC from '../public/assets/images/logos/sosc.svg';
 import CodeZoned from '../public/assets/images/logos/codezoned.png';
 import CodeChef from '../public/assets/images/logos/codechef.png';
+import Link from 'next/link';
 
 const ClubsCommunities = () => {
     return (
@@ -34,30 +35,70 @@ const ClubsCommunities = () => {
                     speed={1500}
 
                     >
-                        <ImageDiv>
-                            <Image width={300} height={300} src={GCE} alt={"GitHub Campus Expert"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={350} height={300} src={GDSC} alt={"Google Developer Student Club"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={300} height={300} src={MLSA} alt={"Microsoft learn student ambassador"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={300} height={300} src={HackClub} alt={"Hack Club"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={300} height={300} src={Mozilla} alt={"Mozilla Club"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={250} height={300} src={SOSC} alt={"Sahyadri Open Source Community"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={300} height={300} src={CodeChef} alt={"CodeChef"}/>
-                        </ImageDiv>
-                        <ImageDiv>
-                            <Image width={300} height={300} src={CodeZoned} alt={"CodeZoned"}/>
-                        </ImageDiv>
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={GCE} alt={"GitHub Campus Expert"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={350} height={300} src={GDSC} alt={"Google Developer Student Club"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={MLSA} alt={"Microsoft learn student ambassador"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={HackClub} alt={"Hack Club"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={Mozilla} alt={"Mozilla Club"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={250} height={300} src={SOSC} alt={"Sahyadri Open Source Community"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={CodeChef} alt={"CodeChef"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
+
+
+                        <Link href='https://cloud.google.com' >
+                            <a target={"_blank"}>
+                                <ImageDiv>
+                                    <Image width={300} height={300} src={CodeZoned} alt={"CodeZoned"}/>
+                                </ImageDiv>
+                            </a>
+                        </Link>
 
                     </Carousel>
                 </Slider>
@@ -92,6 +133,7 @@ const Section = styled.div`
 
 
 `
+
 
 const Wrapper = styled.div`
     display: table-cell;
