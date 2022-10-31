@@ -51,6 +51,7 @@ const ClubsCommunities = () => {
                             </a>
                         </Link>
 
+
                         <Link href='https://studentambassadors.microsoft.com/' >
                             <a target={"_blank"}>
                                 <ImageDiv>
